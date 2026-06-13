@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<link rel='stylesheet' href='style.css'><title>Request a Quote</title></head>
+<body>
+<div class='formwrap'>
+<h1>REQUEST A QUOTE</h1>
+<form id='quoteForm'>
+<input id='name' placeholder='Name' required>
+<input id='phone' placeholder='Phone Number' required>
+<select id='vehicle'><option>Car</option><option>Truck/SUV</option></select>
+<select id='service'><option>Full Detail</option><option>Interior Detail</option><option>Exterior Detail</option><option>Tell Me More</option></select>
+<textarea id='notes' placeholder='Tell us about your vehicle'></textarea>
+<button type='submit'>SEND REQUEST</button>
+</form>
+<div id='successMessage' style='display:none;text-align:center;margin-top:20px;'>
+<h2>Thank You!</h2>
+<p>Your request has been received. We'll contact you shortly.</p>
+<a class='btn' href='index.html'>Back to Home</a>
+</div>
+</div>
+<script src='script.js'></script>
+</body></html>
