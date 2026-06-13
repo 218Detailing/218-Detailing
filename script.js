@@ -8,7 +8,7 @@ document.getElementById('quoteForm').addEventListener('submit', function(e) {
         phone: document.getElementById('phone').value,
         vehicle: document.getElementById('vehicle').value,
         service: document.getElementById('service').value,
-        message: document.getElementById('message').value
+        notes: document.getElementById('notes').value
     })
     .then(function() {
         document.getElementById('quoteForm').style.display = 'none';
