@@ -3,7 +3,7 @@ emailjs.init("TBEmv6j-2wdm83SW-");
 document.getElementById('quoteForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
-    emailjs.send("218Detailing", "template_uverlk5", {
+    emailjs.send("service_sw4gfhc", "template_uverlk5", {
         name: document.getElementById('name').value,
         phone: document.getElementById('phone').value,
         vehicle: document.getElementById('vehicle').value,
@@ -15,7 +15,7 @@ document.getElementById('quoteForm').addEventListener('submit', function(e) {
         document.getElementById('successMessage').style.display = 'block';
     })
     .catch(function(error) {
-        alert("Failed to send request. Please try again.");
         console.log(error);
+        alert("Failed to send request.");
     });
 });
