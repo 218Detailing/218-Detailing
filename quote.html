@@ -1,21 +1,47 @@
-emailjs.init("TBEmv6j-2wdm83SW-");
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request a Quote</title>
+<link rel="stylesheet" href="style.css">
 
-document.getElementById('quoteForm').addEventListener('submit', function(e) {
-    e.preventDefault();
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
 
-    emailjs.send("218Detailing", "template_uverlk5", {
-        name: document.getElementById('name').value,
-        phone: document.getElementById('phone').value,
-        vehicle: document.getElementById('vehicle').value,
-        service: document.getElementById('service').value,
-        notes: document.getElementById('notes').value
-    })
-    .then(function() {
-        document.getElementById('quoteForm').style.display = 'none';
-        document.getElementById('successMessage').style.display = 'block';
-    })
-    .catch(function(error) {
-        console.log(error);
-        alert("Failed to send request.");
-    });
-});
+<body>
+
+<div class="formwrap">
+    <h1>REQUEST A QUOTE</h1>
+
+    <form id="quoteForm">
+        <input id="name" placeholder="Name" required>
+        <input id="phone" placeholder="Phone Number" required>
+
+        <select id="vehicle">
+            <option>Car</option>
+            <option>Truck/SUV</option>
+        </select>
+
+        <select id="service">
+            <option>Full Detail</option>
+            <option>Interior Detail</option>
+            <option>Exterior Detail</option>
+        </select>
+
+        <textarea id="notes" placeholder="Tell us about your vehicle"></textarea>
+
+        <button type="submit">SEND REQUEST</button>
+    </form>
+
+    <div id="successMessage" style="display:none;text-align:center;margin-top:20px;">
+        <h2>Thank You!</h2>
+        <p>Your request has been received. We'll contact you shortly.</p>
+        <a class="btn" href="index.html">Back to Home</a>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
